@@ -15,7 +15,7 @@ const ItemPage = async () => {
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {dataArr.map((item) => (
           <div
-            key={item.name}
+            key={item.image.full}
             className="flex flex-col gap-3 items-center p-4 border border-solid border-[#ccc] rounded-md"
           >
             <Image
@@ -23,6 +23,7 @@ const ItemPage = async () => {
               alt={item.name}
               width={100}
               height={100}
+              priority
             />
             <p>{removeTags(item.name)}</p>
 
