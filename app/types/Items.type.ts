@@ -11,3 +11,16 @@ export type Item = {
     h: number;
   };
 };
+
+export type Champion = {
+  name: string;
+  image: {
+    full: string;
+    sprite: string;
+    group: string;
+    x: number;
+    y: number;
+    w: number;
+    h: number;
+  };
+};
