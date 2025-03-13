@@ -3,8 +3,6 @@ import Image from "next/image";
 import { Champion } from "../types/Items.type";
 
 const ChampionsPage = async () => {
-  // https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion.json
-
   const { data } = await fetchChampions();
   const dataArr: Champion[] = Object.values(data);
 
