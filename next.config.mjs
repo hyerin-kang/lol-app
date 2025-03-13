@@ -5,18 +5,25 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "fakestoreapi.com",
+        hostname: "assets.example.com",
         port: "",
-        pathname: "/**",
+        pathname: "/account123/**",
+        search: "",
+      },
+      {
+        protocol: "https",
+        hostname: "ddragon.leagueoflegends.com",
+        port: "",
+        pathname: "/cdn/**",
+        search: "",
       },
     ],
-    // localPatterns: [
-    //   {
-    //     pathname: "/assets/**",
-    //     search: "",
-    //   },
-    // ],
-    formats: ["image/avif", "image/webp"],
+    localPatterns: [
+      {
+        pathname: "/assets/images/**",
+        search: "",
+      },
+    ],
   },
 };
 
