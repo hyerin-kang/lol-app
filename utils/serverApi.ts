@@ -21,3 +21,14 @@ export const fetchChampions = async () => {
   const data = await response.json();
   return data;
 };
+
+export const fetchChampionsDetail = async (id: string) => {
+  const response = await fetch(
+    `https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion/${id}.json`,
+    {
+      cache: "no-store",
+    }
+  );
+  const data = await response.json();
+  return data;
+};

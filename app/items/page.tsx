@@ -2,12 +2,11 @@ import React from "react";
 import { fetchItemList } from "@/utils/serverApi";
 import Image from "next/image";
 import { Item } from "../types/Items.type";
+import { removeTags } from "@/utils/removeTags";
 
 const ItemPage = async () => {
   const { data } = await fetchItemList();
   const dataArr: Item[] = Object.values(data);
-  const removeTags = (text: string) =>
-    text.replace(/<[^>]*>/g, "").replace(/@[^@]+@/g, "");
 
   return (
     <div className="container mx-auto">
