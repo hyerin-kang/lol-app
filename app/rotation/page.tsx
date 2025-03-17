@@ -16,12 +16,10 @@ const RotationPage = () => {
       //로테이션 아이디
       const { data: rotationData } = await getChampionRotation();
       const rotationId: number[] = rotationData.freeChampionIds;
-      // console.log(rotationId);
 
       //챔피언목록
       const { data: championsData } = await fetchChampionsForRotation();
       const championsArr: Champion[] = Object.values(championsData);
-      // console.log(championsArr);
 
       //동일목록 가져오기
       const matchedChampions = championsArr.filter(function (item) {
@@ -33,7 +31,6 @@ const RotationPage = () => {
     };
 
     fetchData();
-    console.log(rotationList);
   }, []);
   return (
     <div className="container mx-auto">

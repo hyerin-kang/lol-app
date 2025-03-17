@@ -45,7 +45,6 @@ const DetailPage = async ({ params }: DetailPageProps) => {
   const resolveParams = await params;
   const { data } = await fetchChampionsDetail(resolveParams.id);
   const championInfo: ChampionsDetail = data[resolveParams.id];
-  console.log(data);
 
   return (
     <>
