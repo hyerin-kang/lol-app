@@ -1,19 +1,6 @@
-export type Item = {
-  name: string;
-  plaintext: string;
-  image: {
-    full: string;
-    sprite: string;
-    group: string;
-    x: number;
-    y: number;
-    w: number;
-    h: number;
-  };
-};
-
 export type Champion = {
   id: string;
+  key: number;
   name: string;
   title: string;
   image: {
@@ -26,3 +13,18 @@ export type Champion = {
     h: number;
   };
 };
+export interface RotationChamption {
+  id: string;
+  key: number;
+  name: string;
+  title: string;
+  image: {
+    full: string;
+    sprite: string;
+    group: string;
+    x: number;
+    y: number;
+    w: number;
+    h: number;
+  };
+}

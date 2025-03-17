@@ -1,5 +1,5 @@
 import { removeTags } from "@/utils/removeTags";
-import { fetchChampionsDetail } from "@/utils/serverApi";
+import { fetchChampionsDetail } from "@/utils/riotApi";
 import Image from "next/image";
 import React from "react";
 
@@ -48,7 +48,7 @@ const DetailPage = async ({ params }: DetailPageProps) => {
   console.log(data);
 
   return (
-    <div className="container mx-auto">
+    <>
       챔피언상세페이지
       {/* {JSON.stringify(data)} */}
       {/* <p>{dataArrId}</p> */}
@@ -83,7 +83,7 @@ const DetailPage = async ({ params }: DetailPageProps) => {
           );
         })}
       </div>
-    </div>
+    </>
   );
 };
 
