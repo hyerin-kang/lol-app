@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black py-24 text-red-500`}
       >
-        <header className="bg-gray-800 text-white py-4 w-full fixed top-0">
+        <header className="bg-gray-800 text-white py-4 w-full fixed top-0 z-10">
           <nav className="container mx-auto flex justify-around">
             <Link href="/">홈</Link>
             <Link href="/champions">챔피언 목록</Link>
