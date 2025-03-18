@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
 
 interface CardLinkProps {
   href: string;
-  src: any;
+  src: StaticImageData;
   alt: string;
   children: React.ReactNode;
 }

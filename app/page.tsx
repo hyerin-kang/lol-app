@@ -3,7 +3,6 @@ import Logo from "../public/logo.png";
 import Main01 from "../public/lol-main-01.webp";
 import Main02 from "../public/lol-main-02.webp";
 import Main03 from "../public/lol-main-03.webp";
-import Link from "next/link";
 import CardLink from "@/components/main/CardLink";
 
 export default function Home() {

@@ -1,3 +1,4 @@
+"use server";
 import { NextResponse } from "next/server";
 
 const RIOT_API_URL =
