@@ -1,36 +1,27 @@
-// import { Item } from "@/app/types/Items.type";
-
 import { Champion } from "@/app/types/champions/champions.type";
 
+const BASE_URL = "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR";
+
 export const fetchItemList = async () => {
-  const response = await fetch(
-    "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/item.json",
-    {
-      cache: "force-cache",
-    }
-  );
+  const response = await fetch(`${BASE_URL}/item.json`, {
+    cache: "force-cache",
+  });
   const data = await response.json();
   return data;
 };
 
 export const fetchChampions = async () => {
-  const response = await fetch(
-    "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion.json",
-    {
-      next: { revalidate: 86400 },
-    }
-  );
+  const response = await fetch(`${BASE_URL}/champion.json`, {
+    next: { revalidate: 86400 },
+  });
   const data = await response.json();
   return data;
 };
 
 export const fetchChampionsDetail = async (id: string) => {
-  const response = await fetch(
-    `https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion/${id}.json`,
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`${BASE_URL}/champion/${id}.json`, {
+    cache: "no-store",
+  });
   const data = await response.json();
   return data;
 };
@@ -55,9 +46,7 @@ export const getChampionRotation = async () => {
 };
 
 export const fetchChampionsForRotation = async () => {
-  const response = await fetch(
-    "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion.json"
-  );
+  const response = await fetch(`${BASE_URL}/champion.json`);
   const data = await response.json();
   return data;
 };
