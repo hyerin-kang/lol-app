@@ -28,3 +28,35 @@ export interface RotationChamption {
     h: number;
   };
 }
+
+export interface ChampionsDetail {
+  id: string;
+  name: string;
+  title: string;
+  lore: string;
+  image: {
+    full: string;
+    sprite: string;
+    group: string;
+    x: number;
+    y: number;
+    w: number;
+    h: number;
+  };
+  spells: [
+    {
+      id: string;
+      name: string;
+      description: string;
+      image: {
+        full: string;
+        sprite: string;
+        group: string;
+        x: number;
+        y: number;
+        w: number;
+        h: number;
+      };
+    }
+  ];
+}

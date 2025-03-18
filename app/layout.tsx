@@ -37,7 +37,7 @@ export default function RootLayout({
             <Link href="/rotation">챔피언 로테이션</Link>
           </nav>
         </header>
-        <main className="container mx-auto">{children}</main>
+        <main className="container mx-auto px-4 lg:px-0">{children}</main>
       </body>
     </html>
   );
