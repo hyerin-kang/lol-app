@@ -1,13 +1,8 @@
 "use client";
-import {
-  fetchChampionsForRotation,
-  getChampionRotation,
-} from "@/utils/riotApi";
-// import { useEffect, useState } from "react";
+import { getChampionRotation } from "@/utils/riotApi";
 import ChampionsGrid from "../../components/chanpions/ChampionsGrid";
 import ChampionsCard from "@/components/chanpions/ChampionsCard";
 import PageTitle from "@/components/PageTitle";
-import { Champion } from "../types/champions/champions.type";
 import { useQuery } from "@tanstack/react-query";
 
 const RotationPage = () => {
