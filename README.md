@@ -52,7 +52,9 @@
 > - 전역상태 관리를 위해 Tanstack Query 를 사용하였습니다.
 >
 <br/>
+
 ### :heavy_check_mark: **이미지 최적화**
+
 > - Next.js의 <Image /> 컴포넌트를 사용하여 이미지를 최적화하였습니다.
 
 
